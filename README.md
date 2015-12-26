@@ -3,21 +3,21 @@ Morton Z code encoding/decoding/manipulation - c headers 3D, 2D 32 and 64 bit
 
 The Morton order is a mapping from an n-dimensional space onto a linear list 
 of numbers. If you apply it to coordinates, the morton order defines a 
-space-filling curve which is Z-shaped – so it is often is often called 
-Z-order or Z-curve. This idea has inspired a lot of people doing great stuff 
-with graphics (especially ray tracing and collision detection), compression, etc.
+space-filling curve which is Z-shaped – so it is often is often called Z-order 
+or Z-curve. This idea has inspired a lot of people doing great stuff with 
+graphics (especially ray tracing and collision detection), compression, etc.
 
 The other libraries seem to generally assume that a z-code will be generated 
-each time coordinates are selected. This one uses "tesseral arithmetic" to directly 
-add/subtract values to z-encoded coordinates, which makes it very efficient for 
-defining a space and doing things inside (or outside) it. 
+each time coordinates are selected. This one uses "tesseral arithmetic" to 
+directly add/subtract values to z-encoded coordinates, which makes it very 
+efficient for defining a space and doing things inside (or outside) it. 
 
-Nearly all of these functions could be made into one-liners with a little code golf; 
-MSVC (by default) and GCC (with -O) will happily inline them. There is a little bit 
-of test code at the end of each file for inspiration. 
+Nearly all of these functions could be made into one-liners with a little 
+code golf; MSVC (by default) and GCC (with -O) will happily inline them. 
+There is a little bit of test code at the end of each file for inspiration. 
 
 A quick summary, from the 2d_32bit library - the others have the same functionality
-
+<pre>
 /* Morton codes - Thanks to -
    fgiesen.wordpress.com/2009/12/13/decoding-morton-codes/
    www.forceflow.be/2013/10/07/morton-encodingdecoding-through-bit-interleaving-implementations/
@@ -97,5 +97,4 @@ uint32_t ulMC2Dyminusv_o(uint32_t, uint32_t);
 
 uint32_t ulMC2Dplusv_o(uint32_t, uint32_t);
 uint32_t ulMC2Dminusv_o(uint32_t, uint32_t);
-
-
+</pre>
