@@ -236,12 +236,12 @@ uint32_t ulMC2Dminusv(uint32_t p, uint32_t v) {
     }
 
 uint32_t ulMC2Dhalfx(uint32_t p)  {
-    uint32_t halfx = (p & MC2DMASK32X) >> 3;
+    uint32_t halfx = (p & MC2DMASK32X) >> 2;
     return ((halfx) | (p & MC2DMASK32Y)); 
     }
 
 uint32_t ulMC2Dhalfy(uint32_t p) {
-    uint32_t halfy = (p & MC2DMASK32Y) >> 3;
+    uint32_t halfy = (p & MC2DMASK32Y) >> 2;
     return ((halfy) | (p & MC2DMASK32X));
     }   
     
