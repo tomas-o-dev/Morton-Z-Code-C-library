@@ -238,12 +238,12 @@ uint64_t ullMC2Dminusv(uint64_t p, uint64_t v) {
     }
 
 uint64_t ullMC2Dhalfx(uint64_t p)  {
-    uint64_t halfx = (p & MC2DMASK64X) >> 3;
+    uint64_t halfx = (p & MC2DMASK64X) >> 2;
     return ((halfx) | (p & MC2DMASK64Y)); 
     }
 
 uint64_t ullMC2Dhalfy(uint64_t p) {
-    uint64_t halfy = (p & MC2DMASK64Y) >> 3;
+    uint64_t halfy = (p & MC2DMASK64Y) >> 2;
     return ((halfy) | (p & MC2DMASK64X));
     }   
     
